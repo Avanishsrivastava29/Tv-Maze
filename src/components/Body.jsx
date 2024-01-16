@@ -7,6 +7,7 @@ import { MOVIES_API } from "../utils/Constant";
 import MoviesCard from "./MoviesCard";
 
 const Body = () => {
+  // const [employeeData, setEmployeeData] = useState([]);
   const [
     movieData,
     setMovieData,
@@ -16,7 +17,7 @@ const Body = () => {
     setSearchQuery,
   ] = useOutletContext();
 
-  const movieDetails = async () => {
+  const employeeDetails = async () => {
     const data = await fetch(MOVIES_API);
     const json = await data.json();
     //console.log(json);
@@ -25,7 +26,7 @@ const Body = () => {
   };
 
   useEffect(() => {
-    movieDetails();
+    employeeDetails();
   }, []);
 
   return (

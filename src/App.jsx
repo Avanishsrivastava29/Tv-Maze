@@ -6,8 +6,8 @@ import Body from "./components/Body";
 import { useState } from "react";
 
 function App() {
-  const [employeeData, setEmployeeData] = useState([]);
-  const [showData, setShowData] = useState(employeeData);
+  const [movieData, setMovieData] = useState([]);
+  const [showData, setShowData] = useState(movieData);
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -15,8 +15,8 @@ function App() {
       <div>
         <Header
           {...{
-            employeeData,
-            setEmployeeData,
+            movieData,
+            setMovieData,
             showData,
             setShowData,
             searchQuery,
@@ -25,8 +25,8 @@ function App() {
         />
         <Outlet
           context={[
-            employeeData,
-            setEmployeeData,
+            movieData,
+            setMovieData,
             showData,
             setShowData,
             searchQuery,

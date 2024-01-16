@@ -26,6 +26,7 @@ const MoviesCard = ({ data, setShowData, showData }) => {
         {/* Name */}
         <div style={{ fontWeight: "bold" }}>{data.show.name}</div>
 
+        {/* Email-id */}
         <div
           style={{
             marginBottom: "1.5rem",
