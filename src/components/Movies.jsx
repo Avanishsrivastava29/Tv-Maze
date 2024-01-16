@@ -51,11 +51,15 @@ const Movies = () => {
               }}
             >
               <h1>{data.name}</h1>
-              <img
-                src={data.image.original}
-                alt={data.name}
-                style={{ height: "200px" }}
-              />
+              {data.image && data.image.original ? (
+                <img
+                  src={data.image.original}
+                  alt={data.name}
+                  style={{ height: "200px" }}
+                />
+              ) : (
+                <div style={{ padding: "32px" }}>No Image Available</div>
+              )}
               <button
                 onClick={handleToggleForm}
                 style={{

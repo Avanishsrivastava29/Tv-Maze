@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import EmployeeCard from "./EmployeeCard";
+import EmployeeCard from "./MoviesCard";
 import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-const EMPLOYEE_API = "https://api.tvmaze.com/search/shows?q=all";
+import { MOVIES_API } from "../utils/Constant";
 
 const Body = () => {
   // const [employeeData, setEmployeeData] = useState([]);
@@ -18,7 +17,7 @@ const Body = () => {
   ] = useOutletContext();
 
   const employeeDetails = async () => {
-    const data = await fetch(EMPLOYEE_API);
+    const data = await fetch(MOVIES_API);
     const json = await data.json();
     //console.log(json);
     setEmployeeData(json);
