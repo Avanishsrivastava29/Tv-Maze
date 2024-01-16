@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { MOVIE_DETAILS } from "../utils/Constant";
 
 const Movies = () => {
   const { id } = useParams();
@@ -12,7 +13,7 @@ const Movies = () => {
 
   const getdata = async () => {
     console.log(id);
-    const response = await fetch("https://api.tvmaze.com/shows/" + id);
+    const response = await fetch(MOVIE_DETAILS + id);
     const json = await response.json();
     setData(json);
     console.log(json.summary);
@@ -176,7 +177,7 @@ const Movies = () => {
             </div>
 
             <div>
-              <h1>Summary</h1>
+              <h3>Summary</h3>
               <p style={{ marginTop: "50px" }}>{data.summary}</p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EmployeeCard = ({ data, setShowData, showData }) => {
+const MoviesCard = ({ data, setShowData, showData }) => {
   const handleDelete = (data) => {
     setShowData((prevData) =>
       prevData.filter((item) => item.show.name !== data.show.name)
@@ -26,7 +26,6 @@ const EmployeeCard = ({ data, setShowData, showData }) => {
         {/* Name */}
         <div style={{ fontWeight: "bold" }}>{data.show.name}</div>
 
-        {/* Email-id */}
         <div
           style={{
             marginBottom: "1.5rem",
@@ -54,4 +53,4 @@ const EmployeeCard = ({ data, setShowData, showData }) => {
     </>
   );
 };
-export default EmployeeCard;
+export default MoviesCard;

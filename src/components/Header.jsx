@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({
-  employeeData,
-  setEmployeeData,
+  movieData,
+  setMovieData,
   showData,
   setShowData,
   searchQuery,
@@ -16,7 +16,7 @@ const Header = ({
     // console.log(query);
     setSearchQuery(query);
 
-    const filterData = employeeData.filter((item) =>
+    const filterData = movieData.filter((item) =>
       item.show.name.toLowerCase().includes(query)
     );
 
